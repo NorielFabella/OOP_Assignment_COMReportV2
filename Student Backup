@@ -68,7 +68,12 @@ public class Student
                          "Program: " + program + "\n";
 
         // Header for courseList
-        studentOutput += String.format("%-12s%-25s%-8s%-8s%s\n", "Course Code", "Description", "Unit", "Day", "Time");
+        studentOutput += "\nSchedule\n" +
+                         "Course code\t" +
+                         "Description\t\t" +
+                         "Unit\t" +
+                         "Day\t" +
+                         "Time\n";
 
         for(Course course: courseList)
         {

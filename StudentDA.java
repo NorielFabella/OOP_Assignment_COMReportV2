@@ -27,9 +27,6 @@ public class StudentDA
             String[] rowStudentSpecific = new String[4];
             rowStudentSpecific = rowStudent.split(",");
 
-            //System.out.println(theBlockCode + " eee");
-            //System.out.println(rowStudentSpecific[0]);
-           //System.out.println("hello");
 
             if(rowStudentSpecific[0].equals(theBlockCode))
             {

@@ -1,3 +1,4 @@
+import java.io.FileReader;
 import java.util.*;
 public class BlockSection
 {
@@ -12,7 +13,6 @@ public class BlockSection
     public void setBlockCode(String blockCode)
     {
         this.blockCode = blockCode;
-        System.out.println("Current block code: " + blockCode);
     }
 
     public void setDescription(String description)
@@ -65,14 +65,16 @@ public class BlockSection
     public String toString()
     {
         String result = new String();
-
-        for(Student student: studentList)
-        {
-            result += "Block Section: " + blockCode + "\t" +
+        
+        result += "Block Section: " + blockCode + "\t" +
                       "Block Section Description: " + description + "\n" +
                       "Class Adviser: " + adviser + "\n\n";
-            result += student;
+                      
+        for(Student student: studentList)
+        {
+            result += student;   
         }
+        
         return result;
     }
 }

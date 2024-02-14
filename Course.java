@@ -63,6 +63,8 @@ public class Course
         String courseOutput = new String();
 
         courseOutput += String.format("%-12s%-25s%-8s%-8s%s", courseCode, description, unit, day, time +"\n");
+
+       
         
         return courseOutput;
     }

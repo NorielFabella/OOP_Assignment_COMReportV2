@@ -1,12 +1,11 @@
 import java.util.*;
 
-public class Student
+public class StudentBackup
 {
     private String blockCode;
     private String studentNumber;
     private String name;
     private String program;
-    private Integer totalUnitsEnrolled;
     private ArrayList<Course> courseList;
 
     // Setters
@@ -28,12 +27,6 @@ public class Student
     public void setProgram(String program)
     {
         this.program = program;
-    }
-
-    public void setTotalUnitsEnrolled(Integer totalUnitsEnrolled)
-    {
-        this.totalUnitsEnrolled = totalUnitsEnrolled;
-        
     }
 
     public void setCourseList(ArrayList<Course> courseList)
@@ -62,11 +55,6 @@ public class Student
         return program;
     }
 
-    public Integer getTotalUnitsEnrolled()
-    {
-        return totalUnitsEnrolled;
-    }
-
     public List<Course> getCourseList()
     {
         return courseList;
@@ -80,13 +68,17 @@ public class Student
                          "Program: " + program + "\n";
 
         // Header for courseList
-        studentOutput += String.format("%-12s%-25s%-8s%-8s%s\n", "Course Code", "Description", "Unit", "Day", "Time");
+        studentOutput += "\nSchedule\n" +
+                         "Course code\t" +
+                         "Description\t\t" +
+                         "Unit\t" +
+                         "Day\t" +
+                         "Time\n";
 
         for(Course course: courseList)
         {
             studentOutput += course;
         }
-        
         
         studentOutput += "\n";
         return studentOutput;

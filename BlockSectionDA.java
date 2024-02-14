@@ -47,15 +47,21 @@
 
             // Declares StudentDA object
             StudentDA studentDA = new StudentDA(blockSection.getBlockCode());
+            Student student = new Student();
+
+            
 
             // Attaches the student list
             blockSection.setStudentList(studentDA.getStudentList());
 
-            //blockSectionList.add(blockSection);
+            blockSection.setTotalStudents(studentDA.getStudentList().size());
+
+            
+            
 
             // Displays the content of BlockSection object
             System.out.println(blockSection);
-            //System.out.println(blockSectionList + "this is list");
+            
 
 
                 

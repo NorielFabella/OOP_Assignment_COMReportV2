@@ -5,7 +5,7 @@ public class BlockSection
     private String blockCode;
     private String description;
     private String adviser;
-    private int totalStudents;
+    private Integer totalStudents;
     private ArrayList<Student> studentList;
 
     // Setters
@@ -25,7 +25,7 @@ public class BlockSection
         this.adviser = adviser;
     }
 
-    public void setTotalStudents(int totalStudents)
+    public void setTotalStudents(Integer totalStudents)
     {
         this.totalStudents = totalStudents;
     }
@@ -52,7 +52,7 @@ public class BlockSection
         return adviser;
     }
 
-    public int getTotalStudents()
+    public Integer getTotalStudents()
     {
         return totalStudents;
     }
@@ -62,18 +62,25 @@ public class BlockSection
         return studentList;
     }
 
-    public String toString()
+    public String toString() 
     {
         String result = new String();
+        Student studentinfo = new Student();
+        
+        
+    
         
         result += "Block Section: " + blockCode + "\t" +
                       "Block Section Description: " + description + "\n" +
                       "Class Adviser: " + adviser + "\n\n";
                       
+        
         for(Student student: studentList)
         {
             result += student;   
         }
+        result += "Total students: " + getTotalStudents() + "\n" ;
+        
         
         return result;
     }

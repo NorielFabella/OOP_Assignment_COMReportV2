@@ -11,6 +11,8 @@ public class CourseDA
         Scanner courseInfo = new Scanner(new FileReader("scheduleInfo.csv"));
 
         courseList = new ArrayList<Course>();
+        
+        Student student = new Student();
 
         while(courseInfo.hasNext())
         {
@@ -24,24 +26,32 @@ public class CourseDA
             {
                 // Creates Course object
                 Course course = new Course();
+                
 
                 // Puts data in course object
                 course.setCourseCode(rowCourseSpecific[1].trim());
                 course.setDescription(rowCourseSpecific[2].trim());
 
                 course.setUnit(Integer.parseInt(rowCourseSpecific[3].trim()));
+                
+                
+                
                 course.setDay(rowCourseSpecific[4].trim());
                 course.setTime(rowCourseSpecific[5].trim());
 
                 courseList.add(course);
+                
             }
 
         }
+
+        
         courseInfo.close();
 
     }
     public ArrayList<Course> getCourseList()
     {
+        //System.out.println(courseList + "yow this is courselist");
         return courseList;
     }
 }
